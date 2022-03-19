@@ -11,7 +11,11 @@ export default function checkBlackJack(hand) {
     const jack = findCard(hand, 'J')
     const ace = findCard(hand, 'A')
 
-   if (king && ace || queen && ace || jack && ace) {
+   if (king && ace) {
+       return true
+   } else if (queen && ace) {
+       return true
+   } else if (jack && ace) {
        return true
    }
    return false
